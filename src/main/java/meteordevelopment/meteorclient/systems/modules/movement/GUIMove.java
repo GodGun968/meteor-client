@@ -36,14 +36,14 @@ public class GUIMove extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
     private final Setting<Screens> screens = sgGeneral.add(new EnumSetting.Builder<Screens>()
-        .name("guis")
-        .description("Which GUIs to move in.")
+        .name("GUI")
+        .description("在哪些GUI中移动。")
         .defaultValue(Screens.Inventory)
         .build()
     );
 
     private final Setting<Boolean> jump = sgGeneral.add(new BoolSetting.Builder()
-        .name("jump")
+        .name("跳跃")
         .description("Allows you to jump while in GUIs.")
         .defaultValue(true)
         .onChanged(aBoolean -> {
@@ -53,7 +53,7 @@ public class GUIMove extends Module {
     );
 
     private final Setting<Boolean> sneak = sgGeneral.add(new BoolSetting.Builder()
-        .name("sneak")
+        .name("潜行")
         .description("Allows you to sneak while in GUIs.")
         .defaultValue(true)
         .onChanged(aBoolean -> {
